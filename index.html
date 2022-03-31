@@ -1,0 +1,347 @@
+
+
+<!DOCTYPE html>
+<html itemscope itemtype="https://schema.org/QAPage" class="html__responsive  html__fixed-top-bar">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>CryptoGuns | Play 2 Earn</title>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link rel="stylesheet" href="./style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   </head>
+   <body>
+      <div class="z homepage">
+         <div class="z-header">
+            <div id="homepage" class="container">
+               <div class="topnav" id="myTopnav">
+                  <div class="navLogo" style="float: left; padding: 10px;"><a href="./index.html" class="navbar-brand"><img src="asset/chainsagasmall.png" class="logo"></a></div>
+                  <div class="menubutton" style="float: right;"><a href="javascript:void(0);" class="icon" onclick="showMenu()">
+                     <i class="fa fa-bars showmenu"></i>
+                     </a>
+                  </div>
+                  <div class="menu-connect" style="float: right; padding: 20px">
+                     <div id="swatBalance"></div>
+                     <button id="btn-app" type="button" class="btn btn-danger btn-block btn-login">Launch App</button>
+                  </div>
+                  <div class="link">
+                     <div class="topnavbar">
+                       <a id="btnHome" href="./index.html" class="active" style = "font-size:1.5em">Home</a>
+                       <a id="btnCharacters" href="./gameinfo.html" style = "font-size:1.5em">Game Info</a>
+                       <a id="btnClasses" href="./GameCoin.html" style = "color:yellow; font-size:1.5em">GameCoin</a>
+                       <a id="btnClasses" href="asset/CryptoGuns_WhitePaper.pdf" target="_blank" style = "font-size:1.5em">WhitePaper</a>
+                        <!--<a href="./Whitepaper_Cryptoguns.pdf" target="_blank">Whitepaper</a>-->
+                        <!--<a href="https://docs.cryptoguns.io" target="_blank">How to play</a>-->
+                        <a href=""></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!--Background-->
+         <div id="start" class="page-header" style="background: url('./asset/fantasybg.png'); background-size: cover; background-position: center top;background-repeat: repeat; height: 100vh; padding-top: 50px" >
+            <div class="container">
+               <div class="row justify-content-center">
+                  <!-- <div class="col-12" style="padding: 40px; padding-bottom: 20px">
+                     <h1>CryptoGuns</h1>
+                     <span style="font-weight: 1000;">Your Mission Begins</span>
+                  </div>
+                  <div style="margin-top: 0px; width: 60%; text-align:center">
+                     <p>CryptoGuns is a Tactical Turn Based Strategy Game. Your mission is to recruit a capable team of NFT heroes, outfit them with weapons, and defeat the enemy.
+                        Players will be able to upgrade their characters, unlock more recruits and weapons, and trade them on the NFT marketplace.
+                     </p>
+                  </div> -->
+                  <div>
+                     <!-- IMAGE OF CHARACTERS HERE-->     <img id="swatmen" src="asset/chainsagaLogo.png" style="width: 50%; padding-bottom:30px;"><br>
+
+                  </div>
+                  <div id="Classes" class="page-header"  data-aos="fade-up">
+                     <div class="container" >
+                        <div class="row justify-content-center;" style = "margin-bottom: 100px;">
+
+                           <div style="margin-top: 0px; text-align:center; width:100%; margin-bottom: 10px;">
+                              <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+                                 <ol class="carousel-indicators">
+                                    <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carouselIndicators" data-slide-to="1"></li>
+                                    <li data-target="#carouselIndicators" data-slide-to="2"></li>
+
+                                 </ol>
+                                 <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                       <img src="asset/trailer.png" style="width: 100%;">
+                                    </div>
+                                    <div class="carousel-item">
+                                       <img src="asset/adventure.png" style="width: 100%;">
+                                    </div>
+                                    <div class="carousel-item">
+                                       <img src="asset/token.png" style="width: 100%;">
+                                    </div>
+
+                                 </div>
+                                 <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                 <span class="sr-only">Previous</span>
+                                 </a>
+                                 <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                 <span class="sr-only">Next</span>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div >
+
+                       <div class ="row">
+                       <div class="col-lg-3 col-md-4 col-sm-6 mb-30">
+
+                        <!-- <a id="btnClasses" href="./gameinfo.html"><img id="gameinfo" src="asset/blue_button.png" style="width: 100%;"></a> -->
+                      </div>  <div class="col-lg-3 col-md-4 col-sm-6 mb-30">
+
+                        <!-- <a id="btnCharacters" href="./aboutbanana.html"><img id="aboutbanana" src="asset/gold_button.png" style="width: 100%;"></a> -->
+                      </div>  <div class="col-lg-3 col-md-4 col-sm-6 mb-30">
+
+                        <!-- <a id="btnRoadmap" href="https://www.youtube.com/watch?v=QXhFFbV_BfM"><img id="gametrailer" src="asset/purple_button.png" style="width: 100%;"></a> -->
+                      </div>
+                      <div class="col-lg-3 col-md-4 col-sm-6 mb-30" style ="padding-bottom:20px">
+
+                        <!-- <a id="btnHome" href="asset/CryptoGuns_WhitePaper.pdf" class="active" target="_blank"><img id="whitepaper" src="asset/green_button.png" style="width: 100%;"></a> -->
+                          </div>
+                        </div><!--<a href="./Whitepaper_Cryptoguns.pdf" target="_blank">Whitepaper</a>-->
+                        <!--<a href="https://docs.cryptoguns.io" target="_blank">How to play</a>-->
+
+               </div>
+            </div>
+         </div>
+       </div>
+
+       <!-- Characters -->
+         <div id="Cryptoguns" class="page-header" style="background: url('./asset/graveyardBG2.png'); background-size: cover; background-position: center top;background-repeat: no-repeat; height: 100vh" data-aos="fade-up">
+           <div class="container">
+            <div class="row justify-content-center">
+               <div class="col-12" style="padding: 40px; padding-bottom: 20px">
+                  <h1 style="font-size:4rem">Explore</h1>
+                  <!-- <span style="font-weight: 1000;"></span> -->
+               </div>
+               <div style="margin-top: 0px; width: 100%; text-align:center">
+                  <p class="sub-head">CryptoGuns is a Tactical Turn Based Rogue-lite Game. Your mission is to recruit a capable team of NFT heroes and defeat the enemy.
+                     Players will be able to upgrade their characters, unlock more recruits and weapons, and trade them on the NFT marketplace.
+                  </p>
+               </div>
+               <div class="row justify-content-left" style="margin-top: 300px;">
+                  <!-- IMAGE OF CHARACTERS HERE-->     <img id="swatmen" src="asset/skeleton.png" style="width: 100%; padding-bottom:30px;">
+               </div>
+            </div>
+         </div>
+      </div>
+
+         <!-- Classes -->
+         <div id="characters" class="page-header" style="background: url('asset/villageFantasy.png'); background-size: cover; background-position: center top; background-repeat: no-repeat; min-height: 1200px" data-aos="fade-up">
+            <div class="container">
+               <div class="row justify-content-center">
+                  <div class="col-12" style="padding: 40px; padding-top:60px">
+                     <h1 style="font-size:4rem">CHARACTERS</h1>
+                     <span style="font-weight: 1000;">Recruit the best team you can with the characters you obtain</span>
+                  </div>
+                  <div style="margin-top: 0px; text-align:center; width:100%">
+                     <div class="justify-content-center row">
+                       <img id="swatmen" src="asset/characters.png" style="width: 80%; padding-bottom:30px;">
+                           <!--<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Previous</span>
+                              </a>
+                              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Next</span>
+                              </a>-->
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="Classes" class="page-header"  data-aos="fade-up" style= "background: url('asset/creepycastle.png'); background-size: cover; background-position: center top; background-repeat: no-repeat; margin-bottom: 30px; min-height: 1200px" data-aos="fade-up">
+            <div class="container" >
+               <div class="row justify-content-center;" style = "margin-bottom: 100px;">
+                  <div class="col-12" style="padding: 40px; padding-bottom: 20px">
+                     <h1  style="font-size:4rem">Classes</h1>
+                     <span style="font-weight: 1000;">Launching with 6 Diverse Character Classes</span>
+                  </div>
+                  <div class="row justify-content-center">
+
+                 <img id="swatmen" src="asset/skilltrees.png" style="width: 100%; padding-bottom:30px;">
+               </div>
+               </div>
+            </div>
+         </div>
+         <div id="roadmap" class="page-header" style= "background: url('asset/herograve.png'); background-size: cover; background-position: center top; background-repeat: no-repeat; margin-bottom: 30px; min-height: 1200px" data-aos="fade-up">
+            <div class="container">
+               <div class="row justify-content-center">
+                  <div class="col-12" style="padding: 40px; padding-bottom: 20px">
+                     <!-- <h1>ROADMAP</h1> -->
+                     <span style="font-weight: 1000;"></span>
+                  </div>
+                  <div class="text-center">
+                     <div class="card-shop-item card" style="min-height: 280px;">
+                       <div class="card-header"><img src="asset/Internet_Purple.png" style="width: 40%;"> <h4> Genesis NFTS </h4><p> The very first edition of NFT characters from the
+game. These will hold exceptional value and will be scarce. Only 3000 will be minted. </p></div>
+
+                        <div> </br> <p> words words words words</p></div>
+                     </div>
+                  </div>
+                  <div class="text-center">
+                     <div class="card-shop-item card" style="min-height: 280px;">
+                       <div class="card-header"><img src="asset/Leaderboard_Green.png" style="width: 40%;"> <h4> Play2Earn</h4> <p>Chain Saga will pay out GameCoin to players which is needed for in-game advancement and purchases.</p></div>
+
+                       <div class="card-header"><img src="asset/Users_Blue.png" style="width: 40%;"> <h4> PvP </h4><p> Fight against other players, wager coins and nfts as prizes!</p></div>
+                     </div>
+                  </div>
+                  <div class="text-center}">
+                     <div class="card-shop-item card" style="min-height: 280px;">
+                       <div class="card-header"><img src="asset/Trophy_Orange.png" style="width: 40%;"><h4>LeaderBoard</h4> <p> Climb the leaderboard for a chance at extra rewards</p></div>
+                       <div class="card-header"><img src="asset/Shop_Purple.png" style="width: 40%;">  <h4> Nft Marketplace </h4><p> words words words words</p></div>
+                     </div>
+                  </div>
+                  <div class="text-center">
+                     <div class="card-shop-item card" style="min-height: 280px;">
+                       <div class="card-header"><img src="asset/Down_Blue.png" style="width: 40%;"> <h4> Words </h4><p> Cool words generate hype!</p></div>
+
+
+                      </div>
+                </div>
+
+
+                  <div style="margin: 25px 0; width:85%">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-lg-4 col-md-6 col-sm-8 mb-30">
+                              <div class="list-item">
+                                 <div class="header">Phase 1</div>
+                                 <ul class="pricing-list">
+                                    <li class="d-flex">
+                                       <i class="bi bi-arrow-up-right-square-fill"></i>
+                                       <span>Contract & Game development</span>
+                                    </li>
+                                    <li class="d-flex">
+                                       <i class="bi bi-arrow-up-right-square-fill"></i>
+                                       <span>Graphic design and licensing</span>
+                                    </li>
+                                    <li class="d-flex">
+                                       <i class="bi bi-arrow-up-right-square-fill"></i>
+                                       <span>Launch socials and website</span>
+                                    </li>
+                                    <li class="d-flex">
+                                       <i class="bi bi-arrow-up-right-square-fill"></i>
+                                       <span>Partnership Acquisitions</span>
+                                    </li>
+                                    <li class="d-flex">
+                                       <i class="bi bi-arrow-up-right-square-fill"></i>
+                                       <span>Launch Game</span>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <div class="col-lg-4 col-md-6 col-sm-8 mb-30">
+                              <div class="list-item">
+                                 <div class="header">Phase 2</div>
+                                 <ul class="pricing-list">
+                                    <li class="d-flex">
+                                       <i class="bi bi-arrow-up-right-square-fill"></i>
+                                       <span>New Character NFTs added to the game</span>
+                                    </li>
+                                    <li class="d-flex">
+                                       <i class="bi bi-arrow-up-right-square-fill"></i>
+                                       <span>Single Player Story Mode</span>
+                                    </li>
+                                    <li class="d-flex">
+                                       <i class="bi bi-arrow-up-right-square-fill"></i>
+                                       <span>Weekend Tournaments</span>
+                                    </li>
+                                    <li class="d-flex">
+                                       <i class="bi bi-arrow-up-right-square-fill"></i>
+                                       <span>Launch new website<span>
+                                    </li>
+                                    <li class="d-flex">
+                                       <i class="bi bi-arrow-up-right-square-fill"></i>
+                                       <span>BattlePass<span>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <div class="col-lg-4 col-md-6 col-sm-8 mb-30">
+                              <div class="list-item">
+                                 <div class="header">Phase 3</div>
+                                 <ul class="pricing-list">
+                                    <li class="d-flex">
+                                       <i class="bi bi-arrow-up-right-square-fill"></i>
+                                       <span>Additional Character NFTS</span>
+                                    </li>
+                                    <li class="d-flex">
+                                       <i class="bi bi-arrow-up-right-square-fill"></i>
+                                       <span>Cosmetics</span>
+                                    </li>
+                                    <li class="d-flex">
+                                       <i class="bi bi-arrow-up-right-square-fill"></i>
+                                       <span>Land in the form of Fight Stadiums</span>
+                                    </li>
+                                    <li class="d-flex">
+                                       <i class="bi bi-arrow-up-right-square-fill"></i>
+                                       <span>More Maps<span>
+                                    </li>
+                                    <li class="d-flex">
+                                       <i class="bi bi-arrow-up-right-square-fill"></i>
+                                       <span>Game 2 built on CryptoGun NFTs<span>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+
+            </div>
+         </div>
+         <div class="container" data-aos="fade-up">
+            <div>
+               <div class="justify-content-center row">
+                  <div class="row" style="padding: 20px">
+                     <h1>Join our community</h1>
+                  </div>
+                  <div class="row" style="padding: 20px">
+                     <div class="col">
+                       <div class="col">
+                          <a href="https://t.me/cryptogunsgame" target="_blank" class="fa fa-telegram"></a>
+                          <a href="https://twitter.com/cryptogunsgame" target="_blank" class="fa fa-twitter"></a>
+
+                          <a href="https://www.youtube.com/channel/UCDzhLQVH2M9ArflS5sI-1Cg/featured" class="fa fa-youtube"></a>
+                       </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="row" style="padding: 20px"><small>* all image assets are licensed for using in our website and game.</small></div>
+            </div>
+         </div>
+      </div>
+      </div>
+      <footer class="z-footer" style="margin-top: 0px;">
+         <div class="container">
+            <div class="row">
+               <div class="text-center text-md-left d-flex col-sm-12 col-md-6">Copyright © 2021 CryptoGuns, All rights Reserved</div>
+            </div>
+         </div>
+      </footer>
+      </div>
+      <script type="text/javascript" src="./homepage.js"></script>
+   </body>
+</html>
